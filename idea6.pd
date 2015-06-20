@@ -1,0 +1,73 @@
+#N canvas 291 22 554 380 10;
+#X obj 59 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 55 264 freeverb~;
+#X obj 154 215 loadbang;
+#X msg 154 237 dry 1;
+#X obj 57 296 dac~;
+#X obj 59 168 player;
+#X obj 270 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 270 162 player2;
+#X obj 74 105 r PauseR;
+#X obj 130 100 r FwR;
+#X obj 169 101 r scratchPosR;
+#X obj 159 125 r startScratchR;
+#X obj 115 126 r RevR;
+#X obj 65 128 r PlayR;
+#X obj 285 99 r PauseL;
+#X obj 341 97 r FwL;
+#X obj 380 98 r scratchPosL;
+#X obj 370 122 r startScratchL;
+#X obj 326 123 r RevL;
+#X obj 276 122 r PlayL;
+#X obj 334 223 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 334 251 s cbr;
+#X text 76 80 Load audio L;
+#X text 287 77 Load audio R;
+#X text 323 268 Calibrate;
+#X obj 404 223 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 393 268 Stop/Receive sensor data;
+#X obj 404 251 s sensorData;
+#X obj 149 296 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 149 324 s Rquats;
+#X text 144 341 Fix RQuat2;
+#X obj 239 254 colorMe;
+#X obj 423 306 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 424 329 s StopColors;
+#X obj 225 296 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 225 324 s Lquats;
+#X text 220 341 Fix LQuat2;
+#X obj 240 226 OprheLRC2R;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 1 1 4 1;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 5 0 1 0;
+#X connect 5 0 1 1;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 7 0 1 1;
+#X connect 8 0 5 2;
+#X connect 9 0 5 4;
+#X connect 10 0 5 6;
+#X connect 11 0 5 5;
+#X connect 12 0 5 3;
+#X connect 13 0 5 1;
+#X connect 14 0 7 2;
+#X connect 15 0 7 4;
+#X connect 16 0 7 6;
+#X connect 17 0 7 5;
+#X connect 18 0 7 3;
+#X connect 19 0 7 1;
+#X connect 20 0 21 0;
+#X connect 25 0 27 0;
+#X connect 28 0 29 0;
+#X connect 32 0 33 0;
+#X connect 34 0 35 0;
